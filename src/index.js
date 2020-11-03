@@ -3,14 +3,14 @@ import { render } from "react-dom";
 
 import { createStore } from "redux";
 import reducer from "./reducer";
-
 import { Provider } from "react-redux";
-import App from "./App";
-const store = createStore(reducer);
 
-store.subscribe(() => {
-  console.log(store.getState());
-});
+import App from "./App";
+
+const store = createStore(reducer);
+// store.subscribe(() => {
+//   console.log(store.getState());
+// });
 
 render(
   <Provider store={store}>
